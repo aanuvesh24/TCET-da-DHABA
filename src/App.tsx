@@ -176,36 +176,7 @@ const MENU_ITEMS: MenuItem[] = [
 
 const CATEGORIES = ['All', 'Starters', 'Mains', 'Breads', 'Drinks', 'Desserts'];
 
-const INITIAL_ORDERS: Order[] = [
-  {
-    id: 'ORD-101',
-    table: 'Table 02',
-    section: 'Main Dining',
-    time: '6 mins ago',
-    timestamp: Date.now() - 360000,
-    status: 'cooking',
-    items: [
-      { name: 'Woodfiemerald Truffle & Funghi Pizza', qty: 1, notes: 'Extra crispy crust' },
-      { name: 'Smoked Old Fashioned', qty: 2, notes: '' }
-    ],
-    notes: 'Customer celebrating an anniversary',
-    total: 500
-  },
-  {
-    id: 'ORD-098',
-    table: 'Table 07',
-    section: 'Patio Bar',
-    time: '14 mins ago',
-    timestamp: Date.now() - 840000,
-    status: 'ready',
-    items: [
-      { name: 'Prime Wagyu Smash Burger', qty: 2, notes: 'Medium rare, no pickles' },
-      { name: 'Spicy Korean Gochujang Wings', qty: 1, notes: 'Extra dipping sauce' }
-    ],
-    notes: '',
-    total: 580
-  }
-];
+const INITIAL_ORDERS: Order[] = [];
 
 export default function App() {
   const [selectedTable, setSelectedTable] = useState(4);
