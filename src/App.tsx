@@ -499,10 +499,7 @@ function DinerMobileView({
                   <svg className="w-3 h-3 fill-current" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" /></svg>
                 </div>
               </div>
-              <span className="text-[11px] font-medium  text-accent px-2 py-0.5 rounded-full border border-emerald-500/30">
-                Terrace Deck
-              </span>
-            </h1>
+              </h1>
           </div>
 
           {/* Quick Staff Actions */}
@@ -571,11 +568,6 @@ function DinerMobileView({
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />
-                {item.popular && (
-                  <span className="absolute top-1 left-1 bg-accent text-zinc-950 text-[9px] font-extrabold px-1.5 py-0.5 rounded shadow">
-                    HOT
-                  </span>
-                )}
               </div>
 
               {/* Dish Details */}
@@ -801,7 +793,7 @@ function DinerMobileView({
                     {activeOrderTracker.status === 'ready' && 'Order is Plated & Ready!'}
                     {activeOrderTracker.status === 'served' && 'Served at your Table'}
                   </h4>
-                  <p className="text-xs text-text-muted mt-1">Table {selectedTable.toString().padStart(2, '0')} &bull; Terrace Section</p>
+                  <p className="text-xs text-text-muted mt-1">Table {selectedTable.toString().padStart(2, '0')}</p>
                 </div>
 
                 {/* Progress Timeline Stepper */}
@@ -888,10 +880,6 @@ function KitchenDisplayView({ orders, advanceOrderStatus, showToast }: KitchenDi
         </div>
 
         <div className="flex items-center gap-3">
-          <div className="flex items-center gap-2 bg-chassis px-3 py-1.5 rounded-xl border-none text-xs">
-            <span className="w-2.5 h-2.5 rounded-full bg-accent animate-pulse"></span>
-            <span className="text-text-muted font-medium">Station: Tandoor &amp; Chulha</span>
-          </div>
           <button
             onClick={() => showToast('Kitchen test alert chimed! 🔔')}
             className="flex items-center gap-1.5 px-3 py-1.5 bg-panel hover:bg-recessed border-transparent text-text-muted border-none rounded-xl text-xs text-text-muted font-medium transition-colors"
@@ -1025,7 +1013,6 @@ function TicketCard({ order, actionText, actionColor, onAction }: TicketCardProp
             <span className="text-sm font-black text-text-primary">
               {order.table}
             </span>
-            <span className="text-[10px] text-text-muted ml-1.5">({order.section})</span>
           </div>
           <div className="flex items-center gap-1 text-[11px] text-text-muted font-medium bg-chassis px-2 py-1 rounded-md border-none">
             <Clock className="w-3 h-3 text-text-muted" />
